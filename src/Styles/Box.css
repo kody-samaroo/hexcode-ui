@@ -1,0 +1,7 @@
+.Box {
+    position: relative;
+    text-align: center;
+    top: 55px;
+    width: 50%;
+    border: 5px black solid;
+  }
