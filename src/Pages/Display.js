@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../Styles/Box.css';
 
-export default function Display() {
+export default function Display({hexcode, setHexcode}) {
     const [red, setRed] = useState("");
     const [green, setGreen] = useState("");
     const [blue, setBlue] = useState("");
-    const [hexcode, setHexcode] = useState("");
 
     const arrayOfDigits = [
         "0","1","2","3","4","5","6","7","8","9",
@@ -19,14 +18,9 @@ export default function Display() {
         setHexcode("#"+red+green+blue);
     }
 
-    useEffect(() => {
-    }, [hexcode])
-
-    console.log(hexcode)
-
   return (
     <div>
-        <div className="Box" style={{backgroundColor: "black"}}/>
+        <div className="Box" style={{backgroundColor: hexcode}}/>
         <button onClick={generateColor}>Generate</button>
     </div>
   )
