@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Box.css';
 
 export default function Display() {
@@ -11,7 +11,7 @@ export default function Display() {
         "0","1","2","3","4","5","6","7","8","9",
         "A","B","C","D","E","F"
     ]
-
+    
     const generateColor = () => {
         setRed(arrayOfDigits[Math.floor(Math.random() * 15)] + arrayOfDigits[Math.floor(Math.random() * 15)]);
         setGreen(arrayOfDigits[Math.floor(Math.random() * 15)] + arrayOfDigits[Math.floor(Math.random() * 15)]);
@@ -19,9 +19,14 @@ export default function Display() {
         setHexcode("#"+red+green+blue);
     }
 
+    useEffect(() => {
+    }, [hexcode])
+
+    console.log(hexcode)
+
   return (
     <div>
-        <div className="Box" style={{backgroundColor: hexcode}}/>
+        <div className="Box" style={{backgroundColor: "black"}}/>
         <button onClick={generateColor}>Generate</button>
     </div>
   )
