@@ -11,11 +11,17 @@ export default function Answers({ hexcode }) {
     ]
     
     const generateHexcodes = () => {
-        let red = hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)];
-        let green = hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)];
-        let blue = hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)];
-        return "#"+red+green+blue;
+        for(let i=0;i<3;i++){
+            let red = hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)];
+            let green = hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)];
+            let blue = hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)];
+            answers.push("#"+red+green+blue);
+        }
+        answers.push(hexcode);
     }
+
+    generateHexcodes();
+    console.log(answers);
 
 
 
