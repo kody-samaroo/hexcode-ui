@@ -1,28 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Display.css';
 
-export default function Display({ gameOn, setGameOn, hexcode, setHexcode}) {
-    const [red, setRed] = useState("");
-    const [green, setGreen] = useState("");
-    const [blue, setBlue] = useState("");
+export default function Display({ gameOn, setGameOn, choices}) {
 
-    const hexcodeDigits = [
-        "0","1","2","3","4","5","6","7","8","9",
-        "A","B","C","D","E","F"
-    ]
-    
-    const generateColor = () => {
-        setRed(hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)]);
-        setGreen(hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)]);
-        setBlue(hexcodeDigits[Math.floor(Math.random() * 15)] + hexcodeDigits[Math.floor(Math.random() * 15)]);
-        setHexcode("#"+red+green+blue);
+    const restartHandler = () => {
+        setGameOn(!gameOn);
+        choices = [];
     }
-
+    
   return (
-    <div>
-        <div className="container" style={{backgroundColor: hexcode}}/>
-        <button onClick={generateColor}>Generate</button><br/>
-        <button onClick={()=>{setGameOn(!gameOn)}}>Restart</button>
+    <div className="display-container">
+        <div className="display-window" style={{backgroundColor: choices[0]}}/><br/>
+        <button className="display-button" onClick={()=>{setGameOn(!gameOn)}}>Restart</button>
     </div>
   )
 }

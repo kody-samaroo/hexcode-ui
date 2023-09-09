@@ -20,9 +20,6 @@ export default function Answers({ hexcode }) {
         answers.push(hexcode);
     }
 
-    generateHexcodes();
-    console.log(answers);
-
 
 
   return (

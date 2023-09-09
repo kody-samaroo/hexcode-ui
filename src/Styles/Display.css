@@ -1,9 +1,22 @@
-.container {
+.display-container {
     position: relative;
-    margin: auto;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .display-window {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     top: 50px;
-    width: 25%;
+    width: 50%;
     height: 400px;
     border: 5px black solid;
+  }
+
+  .display-button {
+    position: relative;
+    top: 50px;
+    left: 50%;
   }
