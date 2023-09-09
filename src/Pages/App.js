@@ -9,15 +9,23 @@ function App() {
   const [gameOn, setGameOn] = useState(false);
 
   return (
-    <div className="App">
-      <Start/>
-      {/* <Display
-        hexcode={hexcode}
-        setHexcode={setHexcode}
-      />
-      <Answers
-        hexcode={hexcode}
-      /> */}
+    <div className="app">
+      {gameOn ?
+      <div className="game-container">
+        <Display
+          gameOn={gameOn}
+          setGameOn={setGameOn}
+        />
+        <Answers/>
+      </div>
+      :
+      <div className="start-container">
+        <Start
+          gameOn={gameOn}
+          setGameOn={setGameOn}
+        />
+      </div>
+      }
     </div>
   );
 }

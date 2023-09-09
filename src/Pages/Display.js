@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/Display.css';
 
-export default function Display({hexcode, setHexcode}) {
+export default function Display({ gameOn, setGameOn, hexcode, setHexcode}) {
     const [red, setRed] = useState("");
     const [green, setGreen] = useState("");
     const [blue, setBlue] = useState("");
@@ -21,7 +21,8 @@ export default function Display({hexcode, setHexcode}) {
   return (
     <div>
         <div className="container" style={{backgroundColor: hexcode}}/>
-        <button onClick={generateColor}>Generate</button>
+        <button onClick={generateColor}>Generate</button><br/>
+        <button onClick={()=>{setGameOn(!gameOn)}}>Restart</button>
     </div>
   )
 }
