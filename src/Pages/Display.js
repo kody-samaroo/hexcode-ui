@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../Styles/Display.css';
 
-export default function Display({ gameOn, setGameOn, choices}) {
+export default function Display({ gameOn, setGameOn, answer }) {
 
     const restartHandler = () => {
         setGameOn(!gameOn);
-        choices = [];
+        answer = "";
     }
     
   return (
     <div className="display-container">
-        <div className="display-window" style={{backgroundColor: choices[0]}}/><br/>
+        <div className="display-window" style={{backgroundColor: answer}}/><br/>
         <button className="display-button" onClick={()=>{setGameOn(!gameOn)}}>Restart</button>
     </div>
   )

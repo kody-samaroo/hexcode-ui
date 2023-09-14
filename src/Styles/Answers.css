@@ -1,7 +1,6 @@
 .answers-container {
     position: relative;
     margin: 20px auto;
-    text-align: center;
     top: 55px;
     width:400px;
     background-color:#fff;
@@ -13,8 +12,8 @@
 }
 
 .answer {
-    background: #0eda0e;
-    border: 5px black solid;
+    background: #10d210;
+    border: 1px black solid;
     border-radius: 11px;
     box-sizing: border-box;
     color: #fff;
@@ -36,7 +35,6 @@
     touch-action: manipulation; 
     width: 100%;
     word-break: break-word;
-    border: 0;
   }
   
   .answer:active,
