@@ -10,7 +10,9 @@ import Start from './Start';
 function App() {
   const [gameOn, setGameOn] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [guess, setGuess] = useState("");
 
+  // Make state?
   const hexcodeDigits = [
     "0","1","2","3","4","5","6","7","8","9",
     "A","B","C","D","E","F"
@@ -39,6 +41,7 @@ function App() {
   const handleShow = () => setShowModal(true);
 
   const answerHandler = (e) => {
+    setGuess(e.target.innerText);
     handleShow();
   }
                                         
@@ -54,7 +57,6 @@ function App() {
         />
         <Answers
           choices={choices}
-          answer={answer}
           answerHandler={answerHandler}
         />
         <Modal 
@@ -66,13 +68,14 @@ function App() {
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+          <Modal.Body>
+            <div className="guess-body">
+            You guessed <div className="guess-square" style={{background: `${guess}`}}></div> 
+            </div>
+          </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
             <Button variant="primary" onClick={handleClose}>
-              Save Changes
+              Next question
             </Button>
           </Modal.Footer>
         </Modal>

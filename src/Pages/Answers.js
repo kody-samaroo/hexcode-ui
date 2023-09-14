@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Answers.css';
 
-export default function Answers({ answer, choices, answerHandler }) {
+export default function Answers({ choices, answerHandler }) {
 
 
   return (

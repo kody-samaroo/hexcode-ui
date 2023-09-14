@@ -8,5 +8,17 @@
     gap: 120px;
     background: #27282c;
   }
+
+  .guess-body {
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
   
+  .guess-square {
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    width: 100px;
+  }
   
