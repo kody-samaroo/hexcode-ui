@@ -4,6 +4,7 @@ import '../Styles/Answers.css';
 export default function Answers({ choices, answerHandler }) {
 
 
+
   return (
     <div className="answers-container">
         {choices.map((choice, index) => (

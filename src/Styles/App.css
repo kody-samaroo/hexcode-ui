@@ -1,24 +1,13 @@
-  .start-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 120px;
-    background: #27282c;
-  }
-
   .guess-body {
     align-items: center;
     margin-right: auto;
     margin-left: auto;
   }
-  
+
   .guess-square {
     margin-right: auto;
     margin-left: auto;
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 250px;
   }
   
