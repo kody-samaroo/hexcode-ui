@@ -1,19 +1,17 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../Styles/Answers.css';
 
-export default function Answers({ choices, answerHandler }) {
+export default function Answers({ choices, answer }) {
 
-
-
-  return (
-    <div className="answers-container">
-        {choices.map((choice, index) => (
-            <div 
-                className="answer"
-                key={index} 
-                onClick={(e) => answerHandler(e)}   
-            >{choice}</div>
-        ))}
-    </div>
-  )
+    return (
+        <div className="answers-container">
+            {choices.map((choice, index) => (
+                <Link to="/result" key={index} state={{ choice: choice, answer: answer }}>
+                    <div className="answer">
+                    {choice}</div>
+                </Link>
+            ))}
+        </div>
+    )
 }
