@@ -2,6 +2,7 @@ import '../Styles/Game.css';
 import React from 'react';
 import Display from './Display';
 import Answers from './Answers';
+import Timer from './Timer';
 
 
 export default function Game() {
@@ -18,7 +19,7 @@ export default function Game() {
             hexcode += hexcodeDigits[Math.floor(Math.random() * 15)];
         }
         return hexcode;
-    }  
+    }
 
     const loadGame = () => {
         while(choices.length < 4){
@@ -32,6 +33,9 @@ export default function Game() {
 
     return (
         <div className="game-container">
+            <Timer
+                answer={answer}
+            />
             <Display 
                 answer={answer}
             />
