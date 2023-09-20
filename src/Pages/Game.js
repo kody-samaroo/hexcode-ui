@@ -1,4 +1,5 @@
 import '../Styles/Game.css';
+import { Link } from "react-router-dom";
 import React from 'react';
 import Display from './Display';
 import Answers from './Answers';
@@ -36,6 +37,9 @@ export default function Game() {
             <Timer
                 answer={answer}
             />
+            <Link to="/help">
+                <button className="about-button">?</button>
+            </Link>
             <Display 
                 answer={answer}
             />

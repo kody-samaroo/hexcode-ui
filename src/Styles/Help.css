@@ -1,0 +1,14 @@
+.help-container {
+    padding: 20px;
+}
+
+.help-title {
+    font-size: 5rem;
+    font-variant-caps: small-caps;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.help-title::first-letter {
+    color: red;
+}

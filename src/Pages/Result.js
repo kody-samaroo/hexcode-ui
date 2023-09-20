@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-export default function Result({ answer }) {
+export default function Result() {
     let { state } = useLocation();
+    const [records, setRecords] = useState("");
+
 
     return (
         <div>
@@ -13,7 +15,7 @@ export default function Result({ answer }) {
                 backdrop={true}
                 keyboard={false}
             >
-            <Modal.Header closeButton>
+            <Modal.Header>
                 { state.choice === state.answer  ? "Correct" : "Incorrect" }
             </Modal.Header>
             <Modal.Body>

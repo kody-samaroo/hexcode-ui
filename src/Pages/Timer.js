@@ -8,9 +8,9 @@ export default function Timer({ answer }) {
     useEffect(() => {
         const clock = timer > 0 && setInterval(() => setTimer(timer - 1), 1000);
         
-        if (clock === false) { 
-            navigate("/result", { state: {choice: "x", answer: answer }})
-        }
+        // if (clock === false) { 
+        //     navigate("/result", { state: {choice: "x", answer: answer }})
+        // }
 
         return () => clearInterval(clock);
     }, [timer, answer, navigate])
