@@ -5,9 +5,9 @@
     width: 50%;
     background-color:#fff;
     display: grid;
-    grid-template-columns: 350px 350px;
+    grid-template-columns: 43% 43%;
     grid-row: auto auto;
-    grid-column-gap: 100px;
+    grid-column-gap: 10%;
     grid-row-gap: 25px;
 } 
 

@@ -1,13 +1,27 @@
 import '../Styles/Help.css';
 import { Link } from "react-router-dom";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import React from 'react';
 
 export default function Help() {
+
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+          Back
+        </Tooltip>
+      );
+
   return (
     <div className="help-container">
+        <OverlayTrigger
+            placement="right"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip}>
         <Link to="/game">
             <button className="return-button">←</button>
         </Link>
+        </OverlayTrigger>
         <div className="help-text">
             <div className="help-title">
                 Hexcodes
