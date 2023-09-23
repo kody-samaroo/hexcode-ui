@@ -6,7 +6,7 @@ export default function Help() {
   return (
     <div className="help-container">
         <Link to="/game">
-            <button className="return-button">?</button>
+            <button className="return-button">←</button>
         </Link>
         <div className="help-text">
             <div className="help-title">

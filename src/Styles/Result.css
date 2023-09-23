@@ -1,0 +1,50 @@
+.modal-body {
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 24px;
+}
+
+.modal-square {
+    margin-right: auto;
+    margin-left: auto;
+    height: 250px;
+    width: 250px;
+}
+
+.result-button {
+    color: black;
+    background-color: rgb(0, 255, 0);
+    text-decoration: none;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.result-button:hover {
+    color: white;
+}
+
+.result-button::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: rgb(0, 255, 0);
+    z-index: -1;
+    transition: all 1s;
+}
+
+.result-button:hover::before {
+    width: 400%;
+}

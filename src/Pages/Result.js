@@ -1,3 +1,4 @@
+import "../Styles/Result.css";
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
@@ -14,20 +15,20 @@ export default function Result() {
                 show={true} 
                 backdrop={true}
                 keyboard={false}
+                dialogClassName="modal-container"
             >
-            <Modal.Header>
-                { state.choice === state.answer  ? "Correct" : "Incorrect" }
-            </Modal.Header>
             <Modal.Body>
-                <div className="guess-body">
-                    <div className="guess-square" style={{background: `${state.choice}`}}/>
+                <div className="modal-body">
+                    Your guess was...
+                    <div className="modal-square" style={{background: `${state.choice}`}}/>
+                    { state.choice === state.answer  ? "Correct Good Job!" : "Incorrect. Try again." }
                 </div>
             </Modal.Body>
             <Modal.Footer>
-                <Link to="/game">
-                    <Button variant="secondary">
+                <Link to="/game" style={{textDecoration: "none"}}>
+                    <div className="result-button">
                         Next question
-                    </Button>
+                    </div>
                 </Link>
             </Modal.Footer>
             </Modal>
