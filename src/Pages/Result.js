@@ -11,6 +11,28 @@ export default function Result() {
 
     return (
         <div>
+            {
+                (state.choice === "Time Out") ?
+            <Modal 
+                show={true} 
+                backdrop={true}
+                keyboard={false}
+                dialogClassName="modal-container"
+            >
+            <Modal.Body>
+                <div className="modal-body">
+                    You ran out of time. Please try again.
+                </div>
+            </Modal.Body>
+            <Modal.Footer>
+                <Link to="/game" style={{textDecoration: "none"}}>
+                    <div className="result-button">
+                        Next question
+                    </div>
+                </Link>
+            </Modal.Footer>
+            </Modal>
+            :
             <Modal 
                 show={true} 
                 backdrop={true}
@@ -32,6 +54,7 @@ export default function Result() {
                 </Link>
             </Modal.Footer>
             </Modal>
+            }
         </div>
     )
 }
