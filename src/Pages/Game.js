@@ -1,5 +1,7 @@
 import '../Styles/Game.css';
 import { Link } from "react-router-dom";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import React from 'react';
 import Display from './Display';
 import Answers from './Answers';
@@ -30,16 +32,27 @@ export default function Game() {
         return {answer, choices};
     }
 
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+          Help
+        </Tooltip>
+      );
+
     loadGame();
 
     return (
         <div className="game-container">
-            <Timer
-                answer={answer}
-            />
+            <OverlayTrigger
+                placement="right"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}>
             <Link to="/help">
                 <button className="about-button">?</button>
             </Link>
+            </OverlayTrigger>
+            <Timer
+                answer={answer}
+            />
             <Display 
                 answer={answer}
             />

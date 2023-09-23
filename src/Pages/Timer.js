@@ -1,9 +1,10 @@
+import "../Styles/Timer.css";
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Timer({ answer }) {
     const navigate = useNavigate();
-    const [timer, setTimer] = useState(99);
+    const [timer, setTimer] = useState(60);
 
     useEffect(() => {
         const clock = timer > 0 && setInterval(() => setTimer(timer - 1), 1000);
@@ -16,10 +17,9 @@ export default function Timer({ answer }) {
     }, [timer, answer, navigate])
 
 
-
     return (
-        <div className="timer">
-            <h2>{timer}</h2>
+        <div className="timer" style={ timer < 11 ? {color: "red", fontWeight: "bolder"} : {color: "black"}}>
+            {timer}
         </div>
     )
 }

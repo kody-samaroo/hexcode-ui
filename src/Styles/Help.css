@@ -1,4 +1,8 @@
 .help-container {
+    padding: 10px;
+}
+
+.help-text {
     padding: 50px;
     margin-left: 250px;
     margin-right: 250px;
@@ -35,3 +39,39 @@
     font-size: 24px;
     position: relative;
 }
+
+.return-button {
+    color: cyan;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.return-button:hover {
+    color: white;
+}
+
+.return-button::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: cyan;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.return-button:hover::before {
+    width: 400%;
+}
+

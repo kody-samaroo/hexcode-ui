@@ -9,43 +9,40 @@
     grid-row: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+} 
+
+.answer-button {
+    color: black;
+    background-color: rgb(0, 255, 0);
+    text-decoration: none;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
 }
 
-.answer {
-    background: #10d210;
-    border: 1px black solid;
-    border-radius: 11px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    font-size: 1.15em;
-    font-weight: 700;
-    justify-content: center;
-    line-height: 33.4929px;
-    padding: .8em 1em;
-    text-align: center;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    text-shadow: rgba(0, 0, 0, .3) 1px 1px 1px;
-    text-underline-offset: 1px;
-    transition: all .2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation; 
-    width: 100%;
-    word-break: break-word;
-  }
-  
-  .answer:active,
-  .answer:focus {
-    border-bottom-style: none;
-    border-color: #dadada;
-    box-shadow: rgba(0, 0, 0, .3) 0 3px 3px inset;
-    outline: 0;
-  }
-  
-  .answer:hover {
-    border-bottom-style: none;
-    border-color: #dadada;
-  }
+.answer-button:hover {
+    color: white;
+}
+
+.answer-button::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: rgb(0, 255, 0);
+    z-index: -1;
+    transition: all 1s;
+}
+
+.answer-button:hover::before {
+    width: 400%;
+}

@@ -1,20 +1,18 @@
 .game-container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 8px;
 }
 
 .about-button {
-    color: cyan;
-    text-transform: uppercase;
+    color: black;
     text-decoration: none;
-    border: 2px solid black;
+    border: 3px solid black;
     padding: 10px 20px;
     font-size: 17px;
     font-weight: bold;
     background: transparent;
     position: relative;
     transition: all 1s;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .about-button:hover {
@@ -29,7 +27,7 @@
     top: 0;
     left: -40px;
     transform: skewX(45deg);
-    background-color: cyan;
+    background-color: rgb(0, 255, 0);
     z-index: -1;
     transition: all 1s;
 }
@@ -37,3 +35,4 @@
 .about-button:hover::before {
     width: 400%;
 }
+
