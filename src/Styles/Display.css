@@ -4,12 +4,18 @@
     margin-right: auto;
   }
 
+  .display-text {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+  }
+
   .display-window {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 25px;
-    width: 55%;
+    top: 20px;
+    width: 50%;
     height: 350px;
     border: 5px black solid;
   }
