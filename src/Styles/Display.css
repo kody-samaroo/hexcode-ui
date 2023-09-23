@@ -7,15 +7,15 @@
   .display-text {
     position: relative;
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .display-window {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 20px;
-    width: 50%;
-    height: 350px;
+    top: 10px;
+    width: 250px;
+    height: 250px;
     border: 5px black solid;
   }
