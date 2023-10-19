@@ -44,3 +44,50 @@
 .start-button:hover::before {
     width: 400%;
 }
+
+.help-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+}
+
+.help-button {
+  position: relative;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  border: 3px solid rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  letter-spacing: 0.1rem;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow:hidden;
+}
+
+.help-button:hover {
+  color: white;
+}
+
+.help-button::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: rgb(0, 255, 255);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.help-button:hover::before {
+  width: 400%;
+}

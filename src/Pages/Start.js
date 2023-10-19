@@ -12,6 +12,11 @@ export default function Start() {
           Start
       </div>
       </Link>
+      <Link to="/help" style={{textDecoration: "none"}}>
+      <div className="help-button">
+          More Information
+      </div>
+      </Link>
     </div>
   )
 }
