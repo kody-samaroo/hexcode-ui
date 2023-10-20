@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 120px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .start-button {
@@ -43,16 +44,6 @@
 
 .start-button:hover::before {
     width: 400%;
-}
-
-.help-container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 120px;
 }
 
 .help-button {

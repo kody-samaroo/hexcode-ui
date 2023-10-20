@@ -8,7 +8,7 @@ export default function Help() {
 
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
-          Back
+          Home
         </Tooltip>
       );
 
@@ -18,8 +18,8 @@ export default function Help() {
             placement="right"
             delay={{ show: 250, hide: 400 }}
             overlay={renderTooltip}>
-        <Link to="/game">
-            <button className="return-button">←</button>
+        <Link to="/">
+            <button className="home-button">🏠</button>
         </Link>
         </OverlayTrigger>
         <div className="help-text">
